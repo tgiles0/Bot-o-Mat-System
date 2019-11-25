@@ -115,7 +115,7 @@ def put_robots_to_work(robots, num_robots):
     robot_threads = []
     for robot in robots:
         try:
-            r_thread = threading.Thread(target=robot.complete_chores())
+            r_thread = threading.Thread(target=robot.complete_chores)
             robot_threads.append(r_thread)
             r_thread.start()
         except:
